@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="offset-1 col-md-5  col-12 info-element">
+        <span>factory name: <span> {{factory.name}}</span>
+            min: <span> {{factory.min}}</span>
+            max: <span> {{factory.max}} </span>
+        </span>
+    </div>
+    <div class="col-md-6 col-12">
+        <span>Start at:</span>
+        <input type="time" class="form-control form-control-sm" [(ngModel)]="StartTime"/>
+        <span>Finish at:</span>
+        <input type="time" class="form-control form-control-sm" [(ngModel)]="FinishTime"/>
+        <button class="btn btn-success btn-sm" (click)="newNumber()">Generate</button>
+        <i class="fas fa-times" title="delete factory" (click)="remove()"></i>
+    </div>
+</div>
+
+<app-number
+    *ngFor="let numberUnit of numbers; index as index"
+    [numberUnit]="numberUnit"
+    [index]="index"
+    (deleteIndexFromNumber)="deleteComponent($event)"
+></app-number>

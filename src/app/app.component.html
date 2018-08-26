@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row header">
+        <div class="col-md-2 col-12">
+            <span> name: </span>
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="factoryName"/>
+        </div>
+        <div class="col-md-1 col-4">
+            <span>Min: </span>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control form-control-sm" [(ngModel)]="min" (change)="onMinChanged()"/>
+        </div>
+        <div class="col-md-1 col-4">
+            <span>Max: </span>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control form-control-sm" [(ngModel)]="max" (change)="onMaxChanged()"/>
+        </div>
+        <div class="col-md-2 col-4">
+            <button class="btn btn-success" (click)="createFactory()">Generate</button>
+        </div>
+    </div>
+    <app-factory
+        *ngFor="let factory of factories;index as index"
+        [factory]="factory"
+        [index]="index"
+        (deleteIndexFromFactory)="deleteFactory($event)"
+    ></app-factory>
+</div>
+

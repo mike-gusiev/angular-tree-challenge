@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+h1,h2,h3,h4,h5,h6,p{
+    cursor: default;
+}
+
+i{
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10%;
+    margin: 0 4px;
+    padding: 3px;
+}
+
+.fa-times{
+    color: #ff5a3d;
+}

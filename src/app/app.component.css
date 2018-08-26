@@ -1,0 +1,25 @@
+.header {
+    background-color: #32a3c1;
+    color: #f3f3f3;
+}
+
+input {
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: none;
+    padding: 3px 10px;
+    outline: none;
+    display: inline-block;
+}
+
+div {
+    margin-bottom: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+span {
+    line-height: 50px;
+}

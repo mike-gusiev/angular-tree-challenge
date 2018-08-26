@@ -1,0 +1,22 @@
+p {
+    position: relative;
+    display: inline-block;
+}
+
+p:before {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-bottom: 1px solid #636363;
+    border-left: 1px solid #636363;
+    position: absolute;
+    left: -20px;
+    bottom: 50%;
+}
+
+span {
+    border-radius: 5px;
+    background-color: #ffd76a;
+    padding: 2px;
+}
